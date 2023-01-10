@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Alkeira Net</title>
+	<meta name="author" content="Matthew Howell" />
+	<meta name="description" content="Home internet services"." />
+	<meta name="keywords"  content="fullpage,jquery,demo,scroll,loop,continuous" />
+	<meta name="Resource-type" content="Document" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="dist/fullpage.css" />
+	<link rel="stylesheet" type="text/css" href="main.css" />
+  
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+  <style>
+      .fp-watermark {
+          visibility:hidden !important;
+      }
+  </style>
+</head>
+<body>
+
+
+
+<ul id="menu">
+	<li data-menuanchor="firstPage" class="active"><a href="#firstPage">Home</a></li>
+	<li data-menuanchor="secondPage"><a href="#secondPage">Services</a></li>
+	<li data-menuanchor="3rdPage"><a href="#3rdPage">Our Clients</a></li>
+  <li data-menuanchor="4thpage"><a href="#4thpage">Contact Us</a></li>
+
+</ul>
+
+<div id="fullpage">
+	<div class="section " id="section0">
+		
+    
+		<img src="imgs/logo-alkeira-01_06.png" alt="Logo alkeira net" class="logo__image">
+    <p class="tagline">Connecting U</p>
+	</div>
+	<div class="section" id="section1">
+    <h1>Services</h1>
+
+		<div class="container">
+
+      <div class="card">
+        <figure class="card__thumb">
+          <img src="https://source.unsplash.com/KWXEWVRJ1IE/300x510" alt="Picture by Kyle Cottrell" class="card__image">
+          <figcaption class="card__caption">
+            <h2 class="card__title">Highspeed Internet service</h2>
+            <p class="card__snippet">Enjoy faster and better home / office Internet connection with Alkeira.Net broadband. Bundled with WiFi-6 routers, lifestyle gadgets, and more!​.</p>
+            <a href="#" class="card__button">Read more</a>
+          </figcaption>
+        </figure>
+      </div>
+    
+      <div class="card">
+        <figure class="card__thumb">
+          <img src="https://source.unsplash.com/glRqyWJgUeY" alt="Home / Office Internet access" class="card__image">
+          <figcaption class="card__caption">
+            <h2 class="card__title">Safe, Fast and Trustworthy Cloud and Hosting services</h2>
+            <p class="card__snippet">A complete, reliable, affordable solution featuring world-class safety certifications with 24-hour customer support.
+                Hosting, Email and Managed database we got your bussiness IT need covered.
+              .</p>
+            <a href="#" class="card__button">Read more</a>
+          </figcaption>
+        </figure>
+      </div>
+    
+      <div class="card">
+        <figure class="card__thumb">
+          <img src="https://source.unsplash.com/v-FOvoL3onk/300x510" alt="Picture by Daniel Lincoln" class="card__image">
+          <figcaption class="card__caption">
+            <h2 class="card__title">Let's make your software product a success</h2>
+            <p class="card__snippet">Whether you are building a full software product or require your development team to be augmented, Alkeira is your expert software design and development partner.</p>
+            <a href="#" class="card__button">Read more</a>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+	</div>
+	<div class="section" id="section2">
+		<video loop muted controls="false" data-autoplay id="myVideo">
+      <source src="imgs/alkeira_net.mp4" type="video/mp4">
+    </video>
+    
+    <!-- Optional: some overlay text to describe the video -->
+    
+	</div>
+  <div class="section" id="section3">
+		<div class="container">
+      <div class="screen">
+        <div class="screen-header">
+          <div class="screen-header-left">
+            <div class="screen-header-button close"></div>
+            <div class="screen-header-button maximize"></div>
+            <div class="screen-header-button minimize"></div>
+          </div>
+          <div class="screen-header-right">
+            <div class="screen-header-ellipsis"></div>
+            <div class="screen-header-ellipsis"></div>
+            <div class="screen-header-ellipsis"></div>
+          </div>
+        </div>
+        <div class="screen-body">
+          <div class="screen-body-item left">
+            <div class="app-title">
+              <span>CONTACT US</span>
+            </div>
+            <div class="app-contact">CONTACT INFO : +62 812 896 2348</div>
+          </div>
+          <div class="screen-body-item">
+            <div class="app-form">
+              <div class="app-form-group">
+                <input class="app-form-control" placeholder="NAME" value="">
+              </div>
+              <div class="app-form-group">
+                <input class="app-form-control" placeholder="EMAIL">
+              </div>
+              <div class="app-form-group">
+                <input class="app-form-control" placeholder="CONTACT NO">
+              </div>
+              <div class="app-form-group message">
+                <input class="app-form-control" placeholder="MESSAGE">
+              </div>
+              <div class="app-form-group buttons">
+                <button class="app-form-button">CANCEL</button>
+                <button class="app-form-button">SEND</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	</div>
+</div>
+
+
+<script type="text/javascript" src="dist/fullpage.js"></script>
+<script type="text/javascript" src="examples.js"></script>
+
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+      sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+      anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+      menu: '#menu',
+      continuousVertical: true,
+      navigation: true,
+      afterLoad: function(origin, destination, direction, trigger){
+        console.log("afterLoad: destination:" + destination.index);
+      },
+      onLeave: function(origin, destination, direction, trigger){
+        console.log("onLeave: destination:" + destination.index);
+      },
+    });
+</script>
+
+</body>
+</html>
